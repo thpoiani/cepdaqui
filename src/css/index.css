@@ -1,0 +1,61 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
+    background: #FFFFFF;
+    color: #CCCCCC;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #CCCCCC;
+}
+
+.hero {
+    padding: 2em 5em 8em;
+
+    background: #FDE3A7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #FDE3A7 0%, #FFFFFF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FDE3A7), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #FDE3A7 0%,#FFFFFF 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FDE3A7', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+}
+
+.title,
+.subtitle {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+.title {
+    font-size: 4em;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #D35400;
+}
+
+.logo {
+    letter-spacing: 0.45em;
+    margin-right: -15px;
+}
+
+.logo a {
+    color: #F1C40F;
+}
+
+.logo span {
+    color: #E67E22;
+    position: relative;
+}
