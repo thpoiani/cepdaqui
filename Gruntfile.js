@@ -12,9 +12,15 @@ module.exports = function(grunt) {
     var appConfig = {
 
         // Dirs
-        dirs: {
-            js:   'app/js',
-            css:  'app/css'
+        src: {
+            root: 'src',
+            js:   'src/js',
+            css:  'src/css'
+        },
+        dist: {
+            root: 'dist',
+            js:   'dist/js',
+            css:  'dist/css'
         },
 
         // Metadata
@@ -57,11 +63,14 @@ module.exports = function(grunt) {
             }
         },
 
+        // Clean
+        clean : ['<%= dist.root %>'],
+
         // CSS Minify
         cssmin: {
             dist: {
                 files: {
-                    '<%= dirs.css %>/style.min.css': [ '<%= dirs.css %>/normalize.css', '<%= dirs.css %>/main.css' ]
+                    '<%= dist.css %>/style.min.css': [ '<%= src.css %>/normalize.css', '<%= src.css %>/main.css' ]
                 }
             }
         },
@@ -73,7 +82,7 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= dirs.js %>/main.js'
+                '<%= src.js %>/main.js'
             ]
         },
 
@@ -85,7 +94,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '<%= dirs.js %>/main.min.js': [ '<%= dirs.js %>/main.js' ]
+                    '<%= dist.js %>/main.min.js': [ '<%= src.js %>/main.js' ]
                 }
             }
         }
@@ -98,6 +107,7 @@ module.exports = function(grunt) {
     // Register tasks
     // --------------------------
     grunt.registerTask( 'default', [ 'connect', 'watch' ]);
-    grunt.registerTask( 'build', [ 'jshint', 'uglify', 'cssmin' ]);
+    grunt.registerTask( 'build',   [ 'jshint' ]);
+    grunt.registerTask( 'deploy',  [ 'clean', 'uglify', 'cssmin' ]);
 
 };
