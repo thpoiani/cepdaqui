@@ -59,7 +59,7 @@ module.exports = function(grunt) {
                 tasks: 'jshint'
             },
             html: {
-                files: '*.html'
+                files: '<%= src.root %>/*.html'
             }
         },
 
