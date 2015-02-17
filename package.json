@@ -1,0 +1,25 @@
+{
+  "name": "cepdaqui",
+  "version": "0.0.0",
+  "title": "CEPDAQUI",
+  "homepage": "http://github.com/thpoiani/cepdaqui",
+  "description": "Descubra seu CEP com técnicas de Geolocalização Reversas disponíveis através do Google Maps API",
+  "author": {
+    "name": "Thiago Henrique Poiani",
+    "url": "http://github.com/thpoiani",
+    "email": "thpoiani@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thpoiani/cepdaqui.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-contrib-uglify": "~0.2.1",
+    "grunt-contrib-jshint": "~0.5.4",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "load-grunt-tasks": "~0.1.0"
+  }
+}
