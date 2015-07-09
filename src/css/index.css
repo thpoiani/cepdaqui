@@ -4,58 +4,105 @@
             box-sizing: border-box;
 }
 
-body {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 100;
-    background: #FFFFFF;
-    color: #CCCCCC;
-    font-size: 1em;
+html {
+    height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: #CCCCCC;
+body {
+    min-height: 100%;
+    font-size: 62.5%;
+    font-family: 'Exo 2', sans-serif;
+    color: #131313;
 }
 
 .hero {
-    padding: 2em 5em 8em;
-
-    background: #FDE3A7; /* Old browsers */
-    background: -moz-linear-gradient(top,  #FDE3A7 0%, #FFFFFF 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FDE3A7), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #FDE3A7 0%,#FFFFFF 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FDE3A7', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+    background: #FDE3A7;
+    background: -moz-linear-gradient(top,  #FDE3A7 0%, #FFFFFF 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FDE3A7), color-stop(100%,#FFFFFF));
+    background: -webkit-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%);
+    background: -o-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%);
+    background: -ms-linear-gradient(top,  #FDE3A7 0%,#FFFFFF 100%);
+    background: linear-gradient(to bottom,  #FDE3A7 0%,#FFFFFF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FDE3A7', endColorstr='#FFFFFF',GradientType=0 );
 }
 
 .title,
-.subtitle {
+.subtitle,
+.cep {
     font-family: 'Exo 2', sans-serif;
     font-weight: 100;
     text-align: center;
 }
 
 .title {
-    font-size: 4em;
+    font-size: 7em;
 }
 
 .subtitle {
-    font-size: 1.5em;
+    font-size: 2.5em;
     color: #D35400;
+}
+
+@media only screen and (max-width : 599px) {
+    .title {
+        font-size: 4em;
+    }
+
+    .subtitle {
+        font-size: 2.5em;
+    }
 }
 
 .logo {
     letter-spacing: 0.45em;
-    margin-right: -15px;
 }
 
 .logo a {
+    margin-right: -15px;
     color: #F1C40F;
+    text-decoration: none;
 }
 
 .logo span {
     color: #E67E22;
     position: relative;
+}
+
+.cep {
+    color: #D35400;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.spinner {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 25px auto;
+    background-color: #D35400;
+
+    border-radius: 100%;
+    -webkit-animation: scaleout 1.0s infinite ease-in-out;
+    animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+    0% {
+        -webkit-transform: scale(0.0)
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleout {
+    0% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
 }
